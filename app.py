@@ -27,10 +27,8 @@ def chat():
         bot_response = f"You said: {user_message} (I'm still learning!)"
     
     return jsonify({"response": bot_response})
-
-if __name__ == "__main__":
-    @app.route("/")
-    def home():
+@app.route("/")
+def home():
         return "Chatbot API is running!"
-
+if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
